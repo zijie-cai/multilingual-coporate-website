@@ -65,7 +65,7 @@ export default function HeroSection({ lang }: HeroSectionProps) {
         style={{
           y: backgroundY,
           opacity: backgroundOpacity,
-          backgroundImage: "url('/src/topo-1.svg')",
+          backgroundImage: "url('/multilingual-coporate-website/topo-1.svg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
