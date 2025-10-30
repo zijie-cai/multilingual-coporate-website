@@ -353,7 +353,11 @@ const LanguageSelector = ({ currentLang, onLangChange, variant, className }: Lan
           height: variant === 'desktop' ? (indicator?.height ?? 0) * 0.8 : (indicator?.height ?? 0),
           opacity: indicator ? 1 : 0,
         }}
-        transition={{ type: 'spring', stiffness: 500, damping: 35 }}
+        transition={
+          variant === 'mobile'
+            ? { duration: 0.15, ease: 'easeOut' }
+            : { type: 'spring', stiffness: 500, damping: 35 }
+        }
       />
       {languages.map((lang) => {
         const isActive = currentLang === lang;
@@ -368,7 +372,7 @@ const LanguageSelector = ({ currentLang, onLangChange, variant, className }: Lan
             className={`${baseButtonClasses} ${config.buttonPaddingClasses}`}
             style={{ fontSize: config.fontSize }}
             animate={{ color: isActive ? config.activeColor : config.inactiveColor }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: variant === 'mobile' ? 0.12 : 0.2 }}
             aria-pressed={isActive}
             aria-label={`Switch to ${languageNames[lang]} language`}
           >
@@ -404,6 +408,29 @@ export default function Navigation({ currentLang, onLangChange }: NavigationProp
     nav.style.transition = mobileMenuOpen
       ? 'background-color 0.15s ease, backdrop-filter 0.15s ease'
       : 'none';
+  }, [mobileMenuOpen]);
+
+  // Reflect mobile menu state on the <html> element so other components
+  // (e.g. LanguageSwitchBoundary) can adjust animations accordingly.
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    const root = document.documentElement;
+    const attr = 'mobile-menu-open';
+    if (mobileMenuOpen) {
+      root.classList.add(attr);
+    } else {
+      root.classList.remove(attr);
+    }
+    // Notify listeners that mobile menu state changed
+    try {
+      window.dispatchEvent(
+        new CustomEvent('navigation:mobile-menu', {
+          detail: { open: mobileMenuOpen },
+        })
+      );
+    } catch {
+      // no-op in environments without CustomEvent
+    }
   }, [mobileMenuOpen]);
 
   useEffect(() => {

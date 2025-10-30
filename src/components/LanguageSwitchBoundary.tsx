@@ -1,4 +1,5 @@
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
+import { useEffect, useMemo, useState } from 'react';
 import type { ReactNode } from 'react';
 
 type Lang = 'en' | 'ja' | 'zh';
@@ -23,10 +24,52 @@ export default function LanguageSwitchBoundary({
   as = 'div',
 }: LanguageSwitchBoundaryProps) {
   const prefersReduced = useReducedMotion();
+  // On narrow screens when the full-screen mobile menu is open,
+  // skip language-switch crossfades for better performance.
+  const [isNarrow, setIsNarrow] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia('(max-width: 1280px)').matches;
+  });
+  const [menuOpen, setMenuOpen] = useState<boolean>(() => {
+    if (typeof document === 'undefined') return false;
+    return document.documentElement.classList.contains('mobile-menu-open');
+  });
 
-  const initial = { opacity: 0, y: prefersReduced ? 0 : 6 };
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(max-width: 1280px)');
+    const handler = (e: MediaQueryListEvent) => setIsNarrow(e.matches);
+    // Some older browsers use addListener; guard just in case.
+    try {
+      mq.addEventListener('change', handler);
+      return () => mq.removeEventListener('change', handler);
+    } catch {
+      // @ts-ignore
+      mq.addListener?.(handler);
+      return () => {
+        // @ts-ignore
+        mq.removeListener?.(handler);
+      };
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const onToggle = (e: Event) => {
+      if (typeof document === 'undefined') return;
+      setMenuOpen(document.documentElement.classList.contains('mobile-menu-open'));
+    };
+    window.addEventListener('navigation:mobile-menu', onToggle);
+    return () => window.removeEventListener('navigation:mobile-menu', onToggle);
+  }, []);
+
+  const skipAnimations = useMemo(() => {
+    return (isNarrow && menuOpen) || prefersReduced;
+  }, [isNarrow, menuOpen, prefersReduced]);
+
+  const initial = skipAnimations ? { opacity: 1, y: 0 } : { opacity: 0, y: 6 };
   const animate = { opacity: 1, y: 0 };
-  const exit = { opacity: 0, y: prefersReduced ? 0 : -6 };
+  const exit = skipAnimations ? { opacity: 1, y: 0 } : { opacity: 0, y: -6 };
 
   const MotionTag: any = (motion as any)[as] ?? motion.div;
   // Match navbar label rendering: ensure inline-block when rendered as span
@@ -39,7 +82,7 @@ export default function LanguageSwitchBoundary({
         initial={initial}
         animate={animate}
         exit={exit}
-        transition={{ duration: 0.25, ease: 'easeOut' }}
+        transition={skipAnimations ? { duration: 0 } : { duration: 0.2, ease: 'easeOut' }}
         className={className}
         style={inlineStyle}
         aria-live={ariaLive}
