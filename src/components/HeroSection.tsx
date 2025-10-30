@@ -38,8 +38,6 @@ export default function HeroSection({ lang }: HeroSectionProps) {
     offset: ["start start", "end start"]
   });
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '25%']);
-  const backgroundOpacity = useTransform(scrollYProgress, [0, 0.5], [0.55, 0]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const scrollToAbout = () => {
@@ -57,14 +55,11 @@ export default function HeroSection({ lang }: HeroSectionProps) {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ backgroundColor: '#F5EDE3' }}
     >
-      {/* Background Pattern */}
-      <motion.div
+      {/* Background Pattern (static topo) */}
+      <div
         className="absolute inset-0 z-0"
-        animate={{ scale: [1, 1.015, 1] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         style={{
-          y: backgroundY,
-          opacity: backgroundOpacity,
+          opacity: 0.55,
           backgroundImage: "url('/topo-1.svg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
