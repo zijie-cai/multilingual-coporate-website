@@ -35,10 +35,10 @@ const products: Product[] = [
     descriptionJa: "研削砥石は、砥粒（グレーン）、結合材（ボンド）、気孔（ボア）の3要素で構成されています。製法は4種類あり、ビトリファイド法（V）、レジノイド法（B）、ゴム法（R）、マグネシア法（Mg）に分かれます。用途に応じて最適な砥粒・製法を選択し、『削る・磨く・切る』といった主に金属加工分野で使用されます。砥石は鉄鋼、造船、建設、自動車、ベアリング、電気、機械など基幹産業の広い分野で用いられ、“ものづくり”を下支えしています。",
     descriptionZh: "研磨砂轮由三要素构成：磨粒、结合剂、气孔。制造方法有四种：陶瓷（V）、树脂（B）、橡胶（R）和镁（Mg）。根据用途选择合适的磨粒与工法，用于“磨、抛、切”，主要应用于金属加工领域。砂轮广泛应用于钢铁、造船、建筑、汽车、轴承、电气、机械等基础产业，支撑着制造业。",
     images: [
-      "/multilingual-coporate-website/products/grinding-wheels-1.png",
-      "/multilingual-coporate-website/products/grinding-wheels-2.png",
-      "/multilingual-coporate-website/products/grinding-wheels-3.png",
-      "/multilingual-coporate-website/products/grinding-wheels-4.png"
+      "products/grinding-wheels-1.png",
+      "products/grinding-wheels-2.png",
+      "products/grinding-wheels-3.png",
+      "products/grinding-wheels-4.png"
     ],
     tags: ["PVA", "FBB", "Ito Buff", "UB", "Centerless UB", "PVA Wheel Buff"],
     tagsJa: ["PVA", "FBB", "イトバフ", "UB砥石", "センターレスUB", "PVAホイールバフ"],
@@ -75,10 +75,10 @@ const products: Product[] = [
     descriptionJa: "アセチルアセトン（CAS 123-54-6、C5H8O2）は、ケト–エノール互変を示す無色可燃性液体で、水や有機溶媒に溶解し、金属と安定なキレートを形成します。用途：複素環合成、金属アセチルアセトナトの触媒前駆体、抽出／キレート、防錆、重合開始剤、医薬・ビタミンB6／K・農薬の中間体。",
     descriptionZh: "乙酰丙酮（CAS 123-54-6，C5H8O2）为无色易燃液体，具酮–烯醇互变，溶于水及多种有机溶剂，并与金属形成稳定螯合物。用途：杂环合成、金属乙酰丙酮酸盐催化剂前体、萃取/螯合、防腐、聚合引发剂，以及医药、维生素B6/K 与农药的中间体。",
     images: [
-      "/multilingual-coporate-website/products/chemical-1.png",
-      "/multilingual-coporate-website/products/chemical-2.png",
-      "/multilingual-coporate-website/products/chemical-3.png",
-      "/multilingual-coporate-website/products/chemical-4.png"
+      "/products/chemical-1.png",
+      "/products/chemical-2.png",
+      "/products/chemical-3.png",
+      "/products/chemical-4.png"
     ],
     tags: [
       "Acetylacetone",
@@ -117,9 +117,9 @@ const products: Product[] = [
     descriptionZh: "适用于日常与出行的便携音响。Bluetooth 3.0 快速连接，小型低音单元在轻巧坚固的机身中带来清晰且充盈的声音。",
     images: [
       "https://images.unsplash.com/photo-1755625655404-ddabb0d3004f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdWRpbyUyMGNvbm5lY3RvcnMlMjBlbGVjdHJvbmljc3xlbnwxfHx8fDE3NjEzMjc3NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      "/multilingual-coporate-website/products/audio-1.png",
-      "/multilingual-coporate-website/products/audio-2.png",
-      "/multilingual-coporate-website/products/audio-3.png"
+      "/products/audio-1.png",
+      "/products/audio-2.png",
+      "/products/audio-3.png"
     ],
     tags: ["BEYO", "BEMINE", "BELOVE", "Bluetooth 3.0", "PortableSpeaker", "Woofer"],
     tagsJa: ["BEYO", "BEMINE", "BELOVE", "Bluetooth 3.0", "ポータブルスピーカー", "ウーファー"],
@@ -136,10 +136,10 @@ const products: Product[] = [
     descriptionJa: "フェノール系／エポキシ系CCLおよび多層PCBラミネーション用プレスプレート。板厚1.0～2.0mm（許容差±0.1）、最大1,270×3,200mm、平坦度2/3/5mm（治具板0.5/1）。仕上げ：No.6／6M／8M。穴径公差±0.01mm、ピッチ±0.025／±0.050mm。材質：304 1/4H（HV≥275）、301 1/2H（HV≥330）、301H／630H（HV≥430）。鏡面・バイブレーション仕上げの研磨ステンレスにも対応。",
     descriptionZh: "用于酚醛/环氧CCL 与多层PCB 层压的压板。厚度1.0–2.0 mm（公差±0.1），最大1,270×3,200 mm；平整度2/3/5 mm（治具板0.5/1）。表面：No.6/6M/8M。孔径精度至±0.01 mm，孔距±0.025/±0.050 mm。材质：304 1/4H（HV ≥ 275）、301 1/2H（HV ≥ 330）、301H/630H（HV ≥ 430）。支持镜面、振纹等抛光不锈钢。",
     images: [
-      "/multilingual-coporate-website/products/press-1.png",
-      "/multilingual-coporate-website/products/press-2.png",
-      "/multilingual-coporate-website/products/press-3.png",
-      "/multilingual-coporate-website/products/press-4.png"
+      "/products/press-1.png",
+      "/products/press-2.png",
+      "/products/press-3.png",
+      "/products/press-4.png"
     ],
     tags: ["PressPlate", "PCB", "CCL", "No.6", "Mirror", "Vibration"],
     tagsJa: ["プレスプレート", "PCB", "CCL", "No.6", "鏡面", "バイブレーション"],
@@ -156,9 +156,9 @@ const products: Product[] = [
     descriptionJa: "光学・半導体向けガラス部品を、外形加工から研削・ラップ・ポリッシング、真空蒸着薄膜まで一貫対応。材料：光学ガラス・各種特殊ガラス・水晶・石英・サファイア等。",
     descriptionZh: "面向光学/半导体的玻璃部件一体化加工：外形加工、研削、研磨/抛光、真空蒸镀薄膜等。材料涵盖光学玻璃、特种玻璃、水晶、石英、蓝宝石等。",
     images: [
-      "/multilingual-coporate-website/products/glass-1.png",
+      "/products/glass-1.png",
       "https://images.unsplash.com/photo-1666868446465-0dc784d17e83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcHRpY2FsJTIwZ2xhc3MlMjBsZW5zfGVufDF8fHx8MTc2MDI3NjEwMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      "/multilingual-coporate-website/products/glass-2.png",
+      "/products/glass-2.png",
       "https://images.unsplash.com/photo-1760294300835-a531d4e0c63d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcHRpY2FsJTIwbGVucyUyMGFycmF5fGVufDF8fHx8MTc2MTMyODEzNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     ],
     tags: ["OpticalGlass", "Quartz", "Sapphire", "Grinding", "Polishing", "VacuumDeposition"],
@@ -176,10 +176,10 @@ const products: Product[] = [
     descriptionJa: "金型設計は社内で行い、設計技術者が金型製作およびプレス品の品質管理を量産立上げまで一貫担当。低速～高速プレス、順送・絞り金型、金型内積層（モーターコア）、射出・インサート成形、金属／樹脂部品のミクロン級両面ラップまで対応。",
     descriptionZh: "模具设计由公司内部完成，工程师负责从制模到量产导入的冲压件质量管理。能力涵盖低/高速冲压、级进/深拉模、模内叠片（电机铁芯）、注塑/嵌件成型，以及金属/塑料零件的微米级双面研磨。",
     images: [
-      "/multilingual-coporate-website/products/precision-1.png",
-      "/multilingual-coporate-website/products/precision-2.png",
-      "/multilingual-coporate-website/products/precision-3.png",
-      "/multilingual-coporate-website/products/precision-4.png"
+      "/products/precision-1.png",
+      "/products/precision-2.png",
+      "/products/precision-3.png",
+      "/products/precision-4.png"
     ],
     tags: [
       "PrecisionPress",
@@ -217,8 +217,8 @@ const products: Product[] = [
     descriptionJa: "多品種・多業種の精密部品加工に対応。精密切削、ハードターニング、薄肉、ワンチャック／バリレス、特殊歯車、トランスファープレス絞りなどに対応。",
     descriptionZh: "面向多品类、多行业的精密零件加工。能力涵盖精密切削、硬车、薄壁、一夹持/去毛刺、特殊齿轮、转移冲压深拉等。",
     images: [
-      "/multilingual-coporate-website/products/machine-1.png",
-      "/multilingual-coporate-website/products/machine-2.png",
+      "/products/machine-1.png",
+      "/products/machine-2.png",
       "https://images.unsplash.com/photo-1701448149957-b96dbd1926ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDTkMlMjBtaWxsaW5nJTIwb3BlcmF0aW9ufGVufDF8fHx8MTc2MTMyODEzN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       "https://images.unsplash.com/photo-1758873263563-5ba4aa330799?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVjaXNpb24lMjBtYW51ZmFjdHVyaW5nJTIwd29ya3Nob3B8ZW58MXx8fHwxNzYxMzI4MTM4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     ],

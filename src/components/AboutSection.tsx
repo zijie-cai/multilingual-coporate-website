@@ -183,7 +183,7 @@ export default function AboutSection({ lang }: AboutSectionProps) {
               animate={false}
             >
               <ImageWithFallback
-                src="/multilingual-coporate-website/about.png"
+                src="/about.png"
                 alt="Ichiboku workspace"
                 className="w-full h-80 object-cover"
               />

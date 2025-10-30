@@ -373,7 +373,7 @@ export default function Footer({ lang }: FooterProps) {
       <div
         className="absolute inset-0 opacity-[0.15] z-0"
         style={{
-          backgroundImage: "url('/multilingual-coporate-website/topo-1.svg')",
+          backgroundImage: "url('/topo-1.svg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
